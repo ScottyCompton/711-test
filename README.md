@@ -11,4 +11,5 @@ I've completed this evaluation with the following notest/caveats:
 <li>There were some confusing aspects, such as the Phone number not being indicated as required but still having an error message, which I interpreted as if a phone number was provided, it needed to be properly fomatted</li>
 <li>This has been tested on Google Chrome - I did not spend any time with any other browser</li>
 <li>I used the chrome mobile device emulator for the mobile view</li>
+<li>Some of the indicated vertical dimensions on the mobile view seemed very confusing - I did my best but would need further clarification to do a better job with this</li>
 </ol>
