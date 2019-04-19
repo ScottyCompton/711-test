@@ -173,6 +173,26 @@ label {
     height: 30px;
 }
 
+a {
+    text-decoration: underline;
+    color: #565656;
+}
+
+.errmsg,
+.errmsg a {
+    color: #d72339;
+}
+
+input[type="checkbox"].errmsg {
+    outline: 1px solid #ff0000;
+}
+
+#form-errors {
+    margin-left: 40px;
+    margin-top: 40px;
+    color: #d72339;
+}
+
 
 /*  specific font sizes other than default */
 

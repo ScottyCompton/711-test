@@ -5,6 +5,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <script type="text/javscript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/form-validation.js" defer></script>
+    <script language="javascript" src="js/main.js" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
     <link rel="stylesheet" href="css/main.css"></link>
 
@@ -26,86 +28,88 @@
                 <div class="enter-information">
                     <h5>Enter your information below for exclusive offers, promotions and savings.</h5>
                 </div>
-                <div class="form-outer">
-                    <div class="container-fluid form-inner">
-                        <div class="row">
-                            <div class="col-12"><label>* Fields required </label></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="firstName">First Name *</label>
-                                    <input type="text" class="form-control" id="firstName">
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name *</label>
-                                    <input type="text" class="form-control" id="lastName">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" class="form-control" id="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="choosePassword">Choose Password *</label>
-                                    <input type="password" class="form-control" id="choosePassword">
-                                </div>
-                                <div class="form-group">
-                                    <label for="confirmPassword">Confirnm Password *</label>
-                                    <input type="password" class="form-control" id="confirmPassword">
-                                </div>
-                                <div class="form-group">
-                                    <label for="dobMonth">Birthdate *</label>
-                                    <div class="dob-group">
-                                        <div class="dob-select">
-                                            <select class="form-control moo lightGrey" id="dobMonth"></select>
-                                        </div>
-                                        <div class="dob-select">
-                                            <select class="form-control moo lightGrey" id="dobDay" disabled>
+                <form class="needs-validation" novalidate id="frmRegister">
+                    <div class="form-outer">
+                        <div class="container-fluid form-inner">
+                            <div class="row">
+                                <div class="col-12"><label id="fields-reqd">* Fields required </label></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="choosePassword">Choose Password *</label>
+                                        <input type="password" class="form-control" id="choosePassword">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirm Password *</label>
+                                        <input type="password" class="form-control" id="confirmPassword">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dobMonth">Birthdate *</label>
+                                        <div class="dob-group">
+                                            <div class="dob-select">
+                                                <select class="form-control moo lightGrey" id="dobMonth"></select>
+                                            </div>
+                                            <div class="dob-select">
+                                                <select class="form-control moo lightGrey" id="dobDay" disabled>
                                                 <option value="">Day</option>
                                             </select>
-                                        </div>
-                                        <div class="dob-select">
-                                            <select class="form-control  moo lightGrey" id="dobYear"></select>
+                                            </div>
+                                            <div class="dob-select">
+                                                <select class="form-control  moo lightGrey" id="dobYear"></select>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phoneNbr">Phone Number</label>
-                                    <div class="lorem-ipsum">Lorem ipsum dolor</div>
-                                    <input type="tel" class="form-control" id="phoneNbr" placeholder="(XXX) XXX-XXXX" />
-                                </div>
-                                <div class="form-group country-select">
-                                    <span>Country *</span><br />
-                                    <input type="radio" name="country" id="US" /><label for="US"><img src="images/ic-usa-desktop@2x.jpg"></label>
-                                    <input type="radio" name="country" id="Canada" /><label for="Canada"><img src="images/ic-canada-desktop@2x.jpg"></label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="zipCode">Zip/Postal Code *</label>
-                                    <input type="text" class="form-control" id="zipCode">
+                                    <div class="form-group">
+                                        <label for="phoneNbr">Phone Number</label>
+                                        <div class="lorem-ipsum">Lorem ipsum dolor</div>
+                                        <input type="tel" class="form-control" id="phoneNbr" placeholder="(XXX) XXX-XXXX" />
+                                    </div>
+                                    <div class="form-group country-select">
+                                        <span>Country *</span><br />
+                                        <input type="radio" name="country" id="US" checked /><label for="US"><img src="images/ic-usa-desktop@2x.jpg"></label>
+                                        <input type="radio" name="country" id="Canada" /><label for="Canada"><img src="images/ic-canada-desktop@2x.jpg"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zipCode">Zip/Postal Code *</label>
+                                        <input type="text" class="form-control" id="zipCode">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-permissions-group">
-                        <div class="form-group form-permissions">
-                            <div class="form-check"><input type="checkbox" class="form-control" id="chkTosPrivacy" /></div>
-                            <div class="form-check-label"><label for="chkTosPrivacy">Yes, I accept the Terms & Conditions and Privacy Policy.</label></div>
+                        <div class="form-permissions-group">
+                            <div class="form-group form-permissions">
+                                <div class="form-check"><input type="checkbox" class="form-control" id="chkTosPrivacy" /></div>
+                                <div class="form-check-label"><label for="chkTosPrivacy">Yes, I accept the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</label></div>
+                            </div>
+                            <div class="form-group form-permissions">
+                                <div class="form-check"><input type="checkbox" class="form-control" id="chkSpecialOffers" /></div>
+                                <div class="form-check-label"><label for="chkSpecialOffers">Yes, I'd like to receive news and special offers.</label></div>
+                            </div>
                         </div>
-                        <div class="form-group form-permissions">
-                            <div class="form-check"><input type="checkbox" class="form-control" id="chkSpecialOffers" /></div>
-                            <div class="form-check-label"><label for="chkSpecialOffers">Yes, I'd like to receive news and special offers.</label></div>
+                        <div class="form-submit">
+                            <button class="btn btn-primary btn-register">REGISTER</button>
                         </div>
+                        <div id="form-errors"></div>
                     </div>
-                    <div class="form-submit">
-                        <button class="btn btn-primary btn-register">REGISTER</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
 
     </div>
-    <script language="javascript" src="js/main.js">
-    </script>
+
 </body>
 
 </html>
