@@ -15,7 +15,6 @@
 
             // clear out the errors if any
             errContainer.innerHTML = '';
-            var errors = document.getElementsByClassName('errmsg');
             var errors = document.querySelectorAll('.errmsg');
             errors.forEach((err) => {
                 err.classList.remove('errmsg');

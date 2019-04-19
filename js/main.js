@@ -20,6 +20,8 @@
     let dobDay = document.getElementById('dobDay');
     let dobYear = document.getElementById('dobYear');
     let dobSelect = document.querySelectorAll('select');
+    let dobInfo = document.getElementById('dobInfo');
+    let dobInfoTip = document.getElementById('dobInfoToolTip');
     let monthNum = 1;
     let d = new Date();
     let yearNow = d.getFullYear();
@@ -80,6 +82,19 @@
 
     });
 
+
+    // birthday info tooltip
+    // Yes, I know I could have used bootstrap tooltips or jQuery or any number
+    // of other libraries, but I have a serious adversion to importing more than I need
+    // for just one tooltip :-)
+
+    dobInfo.addEventListener('mouseover', (e) => {
+        dobInfoTip.classList.remove('tip-hidden');
+    });
+
+    dobInfo.addEventListener('mouseout', (e) => {
+        dobInfoTip.classList.add('tip-hidden');
+    })
 
     // removes all the options in a selectbox prior
     // to populating it with whatever values
