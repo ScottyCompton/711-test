@@ -96,6 +96,17 @@
         dobInfoTip.classList.add('tip-hidden');
     })
 
+    // tooltip for mobile
+    dobInfo.addEventListener('click', (e) => {
+        if(dobInfoTip.classList.contains('tip-hidden')) {
+            dobInfoTip.classList.remove('tip-hidden');
+        } else {
+            dobInfoTip.classList.add('tip-hidden');
+        }
+        
+    })
+
+        
     // removes all the options in a selectbox prior
     // to populating it with whatever values
 
