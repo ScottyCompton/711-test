@@ -103,6 +103,8 @@
                 }
                 errContainer.innerHTML = strErrMsg;
                 fldsReqd.classList.add('errmsg');
+            } else {
+                e.target.submit();
             }
 
         });
